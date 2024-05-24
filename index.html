@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zack Stock</title>
+    <link href="lightbox2/css/lightbox.css" rel="stylesheet" />
     <style>
         body {
             margin: 0;
@@ -14,29 +15,15 @@
             align-items: center;
             background-color: beige;
             background-image: url('pexels-nietjuh-934069.jpg');
-            background-size: cover;
+            background-size: 880% 880%;
             background-position: center;
             background-repeat: no-repeat;
         }
 
-        h1 {
-            background: linear-gradient(to right, rgb(0, 102, 255), rgb(0, 255, 30));
-            padding: 20px;
-            color: white;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        h2 {
-            background: linear-gradient(to right, rgb(0, 102, 255), rgb(0, 255, 30));
-            padding: 20px;
-            color: white;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
+        h1,
+        h2,
         p {
-            background: linear-gradient(to right, rgb(0, 102, 255), rgb(0, 255, 30));
+            background: linear-gradient(to right, rgb(0, 153, 255), rgb(0, 255, 30));
             padding: 20px;
             color: white;
             border-radius: 10px;
@@ -48,68 +35,186 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             gap: 20px;
-            /* Spazio tra le immagini */
             margin-top: 20px;
             width: 100%;
             padding: 0 20px;
         }
 
         .images-container img {
-            max-width: 400px;
-            max-height: 500px;
+            max-width: 300px;
+            max-height: 400px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .image-item {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <h1>zack stock</h1>
+    <h1>Zack Stock</h1>
     <h2>SCARPE</h2>
     <p>PER CONTATTO IN CASO DI INFORMAZIONI AGGIUNTIVE SUI PRODOTTI CONTATTE QUESTO NUMERO +39 338 482 6891</p>
     <div class="images-container">
-        <img src="IMG-20240520-WA0002.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0003.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0004.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0005.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0006.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0007.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0008.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0009.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0010.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0011.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0012.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0013.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0014.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0015.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0016.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0017.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0018.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0019.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0020.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0021.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0022.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0023.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0024.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0025.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0026.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0027.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0028.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0029.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0030.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0031.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0032.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0033.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0034.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0035.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0036.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0037.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0038.jpg" alt="Description of image 1">
-        <img src="IMG-20240520-WA0040.jpg" alt="Description of image 1">
-
-
-        <!-- Aggiungi altre immagini come necessario -->
+        <div class="image-item">
+            <img src="IMG-20240520-WA0002.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0003.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0004.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0005.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0006.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0007.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0008.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0009.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0010.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0011.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0012.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00013.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0014.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00015.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0016.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00017.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0018.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00019.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0020.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00021.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0022.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00023.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0024.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00025.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0026.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00027.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0028.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00029.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0030.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00031.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0032.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00033.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0034.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00035.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0036.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00037.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA0038.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <div class="image-item">
+            <img src="IMG-20240520-WA00040.jpg" alt="">
+            <p>20 euro</p>
+        </div>
+        <!-- Ajoutez le reste de vos images ici -->
     </div>
+
+    <script src="lightbox2/js/lightbox-plus-jquery.js"></script>
 </body>
 
 </html>
