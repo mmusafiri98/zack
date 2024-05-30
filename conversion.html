@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Support per zack </title>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-box {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .chat-message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .user-message {
+            background-color: #dcf8c6;
+            text-align: right;
+        }
+
+        .bot-message {
+            background-color: #f1f1f1;
+        }
+
+        #user-input {
+            width: calc(100% - 80px);
+            padding: 10px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        #send-button {
+            width: 80px;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Conversation with Support</h1>
+    <div class="chat-container">
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type a message..." />
+        <button id="send-button">Send</button>
+    </div>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const chatBox = document.getElementById('chat-box');
+            const userInput = document.getElementById('user-input');
+            const sendButton = document.getElementById('send-button');
+
+            sendButton.addEventListener('click', sendMessage);
+
+            userInput.addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+
+            function sendMessage() {
+                const message = userInput.value.trim();
+                if (message) {
+                    addMessageToChat('user', message);
+                    userInput.value = '';
+                    simulateBotResponse();
+                }
+            }
+
+            function addMessageToChat(sender, message) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message');
+                messageElement.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+                messageElement.textContent = message;
+                chatBox.appendChild(messageElement);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+
+            function simulateBotResponse() {
+                const responses = [
+                    'buongiorno ',
+                    'siamo pronti a offrivi le nostre  proporste di scarpe',
+                    'per informazione?',
+                    'Attualmente tutti i nostri prodotti di scarpe sono presenti nel nostro magazzino ',
+
+
+
+                ];
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                setTimeout(() => {
+                    addMessageToChat('bot', randomResponse);
+                }, 1000);
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
