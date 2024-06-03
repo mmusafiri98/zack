@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Support per zack </title>
+    <title>Chat Support per Zack</title>
     <style>
         /* styles.css */
         body {
@@ -74,6 +74,11 @@
 </head>
 
 <body>
+    <h2> per ottenere informazioni se ci sono cataologi disponibili nel nostro stock scrivere nella chat questo comando
+        disponibilita catalogo </h2>
+    <h2>per ottenere informazioni per saperne di piu sui nostro stock di scarpe scrivete nella chat a chi rivolgersi per
+        informazioni maggiori </h2>
+
     <h1>Conversation with Support</h1>
     <div class="chat-container">
         <div id="chat-box" class="chat-box"></div>
@@ -81,7 +86,6 @@
         <button id="send-button">Send</button>
     </div>
     <script>
-
         document.addEventListener('DOMContentLoaded', function () {
             const chatBox = document.getElementById('chat-box');
             const userInput = document.getElementById('user-input');
@@ -100,7 +104,7 @@
                 if (message) {
                     addMessageToChat('user', message);
                     userInput.value = '';
-                    simulateBotResponse();
+                    simulateBotResponse(message);
                 }
             }
 
@@ -113,25 +117,30 @@
                 chatBox.scrollTop = chatBox.scrollHeight;
             }
 
-            function simulateBotResponse() {
-                const responses = [
-                    'buongiorno ',
-                    'siamo pronti a offrivi le nostre  proporste di scarpe',
-                    'per informazione?',
-                    'Attualmente tutti i nostri prodotti di scarpe sono presenti nel nostro magazzino ',
+            function simulateBotResponse(userMessage) {
+                let botResponse = '';
+                if (userMessage.toLowerCase().includes('disponibilita catalogo')) {
+                    botResponse = 'Attualmente tutti i nostri prodotti di scarpe sono presenti nel nostro magazzino';
+                } else {
+                    if (userMessage.toLowerCase().includes('a chi rivolgersi per informazioni maggiori')) {
+                        botResponse = 'Per informazione se siete interessati contatte questo numero +39 338 482 6891';
+                    } else {
+                        const responses = [
+                            'Buongiorno siamo zack stock pronti ad offrivi in vendita le piu belle scarpe',
+                            'Siamo pronti a offrirvi le nostre proposte di scarpe sul nostro sito ufficiale.',
+                            'Per informazione se siete interessati contatte questo numero +39 338 482 6891',
+                            'Attualmente tutti i nostri prodotti di scarpe sono presenti nel nostro magazzino',
 
 
+                        ];
+                        botResponse = responses[Math.floor(Math.random() * responses.length)];
+                    }
+                }
 
-                ];
-                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
                 setTimeout(() => {
-                    addMessageToChat('bot', randomResponse);
+                    addMessageToChat('bot', botResponse);
                 }, 1000);
             }
         });
-
-
     </script>
 </body>
-
-</html>
